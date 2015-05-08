@@ -1,0 +1,16 @@
+#customize-preview {
+	text-align: center;
+}
+#customize-preview.wp-full-overlay-main.iframe-ready {
+	background: #585c62;
+}
+#customizer-resizer-box {
+	text-align: left;
+	padding: 10px;
+}
+#customizer-resizer-box div,
+#customizer-resizer-box p {
+	margin: 0;
+	padding: 0;
+	display: inline-block;
+}
