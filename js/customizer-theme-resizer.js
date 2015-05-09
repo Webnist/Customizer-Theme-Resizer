@@ -4,12 +4,23 @@
 	var $resizerBox         = $('#customizer-resizer-box');
 	var $resizerSelect      = $('#customizer-resizer');
 	var $resizerWidth       = $('#resizer-width');
-	var $resizerWidthInput  = $resizerWidth.children('input');
+	var $resizerWidthInput  = $resizerWidth.find('input');
 	var $resizerHeight      = $('#resizer-height');
-	var $resizerHeightInput = $resizerHeight.children('input');
+	var $resizerHeightInput = $resizerHeight.find('input');
 	var $resizerRotate      = $('#resizer-rotate');
 	var $resizerRefresh     = $('#resizer-refresh');
 	var $previewScreen      = $preview.children('iframe');
+
+	function resizerChange( $width, $height ) {
+		if ( $width && $height ) {
+			$('iframe').css({
+				'width': $width,
+				'height': $height
+			});
+		} else {
+			$('iframe').removeAttr('style');
+		}
+	}
 	if ( $resizerBox[0] ) {
 		$resizerBox.prependTo($preview);
 		$resizerSelect.change(function() {
@@ -17,40 +28,24 @@
 			var $height = $resizerSelect.children('option:selected').data('resizer-height');
 			$resizerWidthInput.val($width);
 			$resizerHeightInput.val($height);
-			if ( $width && $height ) {
-				$('iframe').css({
-					'width': $width,
-					'height': $height
-				});
-			} else {
-				$('iframe').removeAttr('style');
-			}
+			resizerChange( $width, $height );
 		});
 		$resizerRotate.on( 'click', function(event) {
 			var $height = $resizerWidthInput.val();
 			var $width  = $resizerHeightInput.val();
 			$resizerWidthInput.val($width);
 			$resizerHeightInput.val($height);
-			if ( $width && $height ) {
-				$('iframe').css({
-					'width': $width,
-					'height': $height
-				});
-			} else {
-				$('iframe').removeAttr('style');
-			}
+			resizerChange( $width, $height );
 		});
 		$resizerRefresh.on( 'click', function(event) {
 			var $width  = $resizerWidthInput.val();
 			var $height = $resizerHeightInput.val();
-			if ( $width && $height ) {
-				$('iframe').css({
-					'width': $width,
-					'height': $height
-				});
-			} else {
-				$('iframe').removeAttr('style');
-			}
+			resizerChange( $width, $height );
+		});
+		$(document).ajaxSuccess(function(e, xhr, settings) {
+			var $width  = $resizerWidthInput.val();
+			var $height = $resizerHeightInput.val();
+			resizerChange( $width, $height );
 		});
 	}
 
