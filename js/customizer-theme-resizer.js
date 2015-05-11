@@ -7,6 +7,7 @@
 	var $resizerWidthInput  = $resizerWidth.find('input');
 	var $resizerHeight      = $('#resizer-height');
 	var $resizerHeightInput = $resizerHeight.find('input');
+	var $resizerReset       = $('#resizer-reset');
 	var $resizerRotate      = $('#resizer-rotate');
 	var $resizerRefresh     = $('#resizer-refresh');
 	var $previewScreen      = $preview.children('iframe');
@@ -29,6 +30,12 @@
 			$resizerWidthInput.val($width);
 			$resizerHeightInput.val($height);
 			resizerChange( $width, $height );
+		});
+		$resizerReset.on( 'click', function(event) {
+			$resizerSelect.val('');
+			$resizerWidthInput.val('');
+			$resizerHeightInput.val('');
+			resizerChange();
 		});
 		$resizerRotate.on( 'click', function(event) {
 			var $height = $resizerWidthInput.val();

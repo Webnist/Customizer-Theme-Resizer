@@ -1,8 +1,8 @@
-# Customizer Theme Resizer v0.7.2
+# Customizer Theme Resizer v0.7.4
 
 Responsive Web design review enables theme customization.
 
-[![](http://img.youtube.com/vi/6BDB-2yYRKA/0.jpg)](https://www.youtube.com/watch?v=6BDB-2yYRKA)
+[![](http://img.youtube.com/vi/_DFdXqbeRPQ/0.jpg)](https://www.youtube.com/watch?v=_DFdXqbeRPQ)
 
 ## Installation
 
@@ -12,6 +12,12 @@ Responsive Web design review enables theme customization.
 * Open \'Appearance\' -> \'Customize\' menu.
 
 ## Changelog
+
+### 0.7.4
+Reset event
+
+### 0.7.3
+Fix Readme.txt
 
 ### 0.7.2
 CSS adjustment

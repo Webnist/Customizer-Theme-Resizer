@@ -56,7 +56,9 @@ class CustomizerThemeResizer extends CustomizerThemeResizerInit {
 		$size = apply_filters( 'customizer_theme_resizer_size', $default );
 		$output = '';
 		$output .= '<div id="customizer-resizer-box" class="wp-ui-primary">';
+		$output .= '<p id="resizer-reset">' . "\n";
 		$output .= '<span class="dashicons dashicons-admin-settings"></span>' . "\n";
+		$output .= '</p>' . "\n";
 		$output .= '<select id="customizer-resizer" name="customizer-resizer">' . "\n";
 		$output .= '<option value="">' . __( 'Select size' ) . '</option>' . "\n";
 		foreach ( $size as $key => $value ) {

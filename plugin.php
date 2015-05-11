@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: Customizer Theme Resizer
-Version: 0.7.3
+Version: 0.7.4
 Description: PLUGIN DESCRIPTION HERE
 Author: Webnist
 Author URI: http://profiles.wordpress.org/webnist
