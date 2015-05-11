@@ -1,7 +1,7 @@
 === Customizer Theme Resizer ===
 Contributors: Webnist
 Tags: Customizer
-Requires at least: 4.2.2
+Requires at least: 3.8
 Tested up to: 4.2.2
 Stable tag: 0.7.1
 License: GPLv2 or later

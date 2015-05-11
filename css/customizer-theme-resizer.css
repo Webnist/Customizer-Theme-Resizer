@@ -1,8 +1,11 @@
 #customize-preview {
 	text-align: center;
+	background: #585c62;
 }
 #customize-preview.wp-full-overlay-main.iframe-ready {
 	background: #585c62;
+	-webkit-box-shadow: 0 0 5px 0 #000000;
+	box-shadow: 0 0 5px 0 #000000;
 }
 #customizer-resizer-box {
 	text-align: left;
@@ -13,4 +16,11 @@
 	margin: 0;
 	padding: 0;
 	display: inline-block;
+}
+#customizer-resizer-box input {
+	height: 24px;
+}
+#customizer-resizer-box span {
+	vertical-align: middle;
+	cursor: pointer;
 }
