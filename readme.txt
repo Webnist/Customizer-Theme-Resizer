@@ -3,7 +3,7 @@ Contributors: Webnist
 Tags: Customizer
 Requires at least: 3.8
 Tested up to: 4.2.2
-Stable tag: 0.7.1
+Stable tag: 0.7.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -25,6 +25,9 @@ Responsive Web design themes, and resize the toolbar, you see.
 1. Resizer Ber
 
 == Changelog ==
+
+= 0.7.2 =
+CSS adjustment
 
 = 0.7.1 =
 The first release.
