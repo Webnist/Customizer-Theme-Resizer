@@ -2,6 +2,8 @@
 
 Responsive Web design review enables theme customization.
 
+[![](http://img.youtube.com/vi/6BDB-2yYRKA/0.jpg)](https://www.youtube.com/watch?v=6BDB-2yYRKA)
+
 ## Installation
 
 * A plug-in installation screen is displayed on the WordPress admin panel.
