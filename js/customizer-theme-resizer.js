@@ -1,18 +1,20 @@
 (function($){
-	var $preview               = $('#customize-preview');
-	var $resizerBox            = $('#customizer-resizer-box');
-	var $resizerSelect         = $('#customizer-resizer');
-	var $resizerWidth          = $('#resizer-width');
-	var $resizerWidthInput     = $resizerWidth.find('input');
-	var $resizerHeight         = $('#resizer-height');
-	var $resizerHeightInput    = $resizerHeight.find('input');
-	var $resizerReset          = $('#resizer-reset');
-	var $resizerRotate         = $('#resizer-rotate');
-	var $resizerRefresh        = $('#resizer-refresh');
-	var $resizerOpenClose     = $('#resizer-open-close');
-	var $previewScreen         = $preview.children('iframe');
-	var $previewToggleView     = $('a.customize-controls-preview-toggle');
+	var $preview             = $('#customize-preview');
+	var $resizerBox          = $('#customizer-resizer-box');
+	var $resizerSelect       = $('#customizer-resizer');
+	var $resizerWidth        = $('#resizer-width');
+	var $resizerWidthInput   = $resizerWidth.find('input');
+	var $resizerHeight       = $('#resizer-height');
+	var $resizerHeightInput  = $resizerHeight.find('input');
+	var $resizerReset        = $('#resizer-reset');
+	var $resizerRotate       = $('#resizer-rotate');
+	var $resizerRefresh      = $('#resizer-refresh');
+	var $resizerOpenClose    = $('#resizer-open-close');
+	var $previewScreen       = $preview.children('iframe');
+	var $previewToggleView   = $('a.customize-controls-preview-toggle');
 	var $openCloseTimer;
+	var $animationWidth      = $('#animation-width');
+	var $animationWidthInput = $animationWidth.find('input');
 
 	function resizerChange( $width, $height ) {
 		if ( $width && $height ) {
@@ -27,8 +29,9 @@
 
 	function resizerOpenClose() {
 		$openCloseTimer = setInterval(function(){
-			var $iframeWidth = $('iframe').width();
-			var $iframeHeight = $('iframe').height();
+			var $iframeWidth           = $('iframe').width();
+			var $iframeHeight          = $('iframe').height();
+			var $animationWidth        = $animationWidthInput.val();
 			var $customizePreviewWidth = $preview.width();
 			if ( 320 >= $iframeWidth ) {
 				$('iframe').removeClass('close');
@@ -39,17 +42,17 @@
 			}
 			if ( $('iframe').hasClass('close') ) {
 				$('iframe').css({
-					'width': '-=' + '10' + 'px'
+					'width': '-=' + $animationWidth + 'px'
 				});
 			} else if ( $('iframe').hasClass('open') ) {
 				$('iframe').css({
-					'width': '+=' + '10' + 'px'
+					'width': '+=' + $animationWidth + 'px'
 				});
 			}
 			$resizerWidthInput.val($iframeWidth);
 			$resizerHeightInput.val($iframeHeight);
 
-		}, 500);
+		}, 1000);
 	}
 	function stopResizerOpenClose() {
 		$resizerOpenClose.removeClass('on');
