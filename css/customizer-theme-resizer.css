@@ -2,6 +2,9 @@
 	text-align: center;
 	background: #585c62;
 }
+#customize-preview iframe {
+	background: #fff;
+}
 #customize-preview.wp-full-overlay-main.iframe-ready {
 	background: #585c62;
 	-webkit-box-shadow: 0 0 5px 0 #000000;

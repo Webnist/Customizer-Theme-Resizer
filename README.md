@@ -1,4 +1,4 @@
-# Customizer Theme Resizer v0.7.5
+# Customizer Theme Resizer v0.8
 
 Responsive Web design review enables theme customization.
 
@@ -12,6 +12,9 @@ Responsive Web design review enables theme customization.
 * Open \'Appearance\' -> \'Customize\' menu.
 
 ## Changelog
+
+### 0.8
+add Animation
 
 ### 0.7.4
 tweak
